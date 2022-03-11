@@ -1,7 +1,7 @@
 # Data Source
 Pay data gathered from MyU following a [guide posted on AskMN](https://askmn.libanswers.com/umtc_faq/faq/341039) taking "observations" in Janurary, June, and October over the last several years.
-This data was then anonymized and merged into the [data.csv](data.csv) file in this repo.
-The merging was done by [merge.py](merge.py).
+This data was then anonymized and merged into the [../data.csv](data.csv) file in this repo.
+The merging was done by [../merge.py](merge.py).
 
 # Obtain Raw Data
 As the guide linked above says, non-University researchers must contact a UMN librarian in order to gather this data.

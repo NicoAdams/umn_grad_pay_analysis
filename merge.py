@@ -49,10 +49,13 @@ def extract_single(in_fn, out_f, columns, manip) :
         before writing to output file
     """
 
-    with open(fn) as f :
+    def identity(x) :
+        return x
+
+    with open(in_fn,encoding='utf-8-sig') as f :
         r = csv.DictReader(f)
         for row in r :
-            out_f.writerow([manip.get(c,lambda x : return x)(row[c]) for c in columns])
+            out_f.writerow([manip.get(c,identity)(row[c]) for c in columns])
 
 
 def main(file_list, 
@@ -68,4 +71,4 @@ def main(file_list,
 
 if __name__ == '__main__' :
     import sys
-    sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv[1:]))
